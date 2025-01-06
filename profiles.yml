@@ -1,0 +1,13 @@
+dbt_profile:
+  outputs:
+    dev:
+      type: postgres
+      host: db
+      user: user
+      password: password
+      port: 5432
+      dbname: dbt_demo
+      schema: codein
+      connect_timeout: 10 #seconds
+
+  target: dev

@@ -1,0 +1,24 @@
+name: data_quality_dbt
+version: 1.0
+config-version: 2
+
+profile: dbt_profile
+
+# target-path: "target/"
+clean-targets:
+  - "target/"
+
+# Configuration des models
+models:
+  data_quality_dbt:
+    +schema: analytics # Par défaut, tous les modèles iront dans 'analitics' (schema par defaut)
+
+# Configuration des seeds
+seeds:
+  schema: raw
+
+# Configuration des tests
+data_tests:
+  +store_failures: true 
+  +schema: data_quality
+

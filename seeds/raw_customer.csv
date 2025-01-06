@@ -1,0 +1,7 @@
+id,first_name,last_name,email,phone,date_of_birth
+1,John,Doe,john.doe@example.com,1234567890,1985-05-12
+2,Jane,Smith,jane.smith@example.com,abcdef,1990-11-20
+3,Bob,Johnson,bob.johnson@example,0123456789,1900-01-01
+4,Emily,Davis,emily.davis@example.com,,2067-03-15
+5,Alice,Martin,alice.martin@example.com,1234567890,1995-07-25
+6,John,Doe,john.doe@example.com,1234567890,1985-05-12

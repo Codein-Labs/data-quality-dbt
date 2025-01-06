@@ -1,0 +1,42 @@
+# tests/order.yml
+version: 2
+
+models:
+  - name: order
+    description: "Modèle pour valider les données des commandes"
+    columns:
+      - name: id
+        tests:
+          - unique:
+              name: test_unique_id
+          - not_null:
+              name: test_not_null_id
+      - name: amount
+        tests:
+          - dbt_utils.expression_is_true:
+              name: test_positive_amount
+              expression: " > 0"
+      - name: customer_id
+        tests:
+          - unique:
+              name: test_customer_id_unique
+          - not_null:
+              name: test_customer_id_not_null
+          - relationships:
+              name: test_customer_id_relationship
+              to: ref('customer')
+              field: id
+      - name: product_id
+        tests:
+          - unique:
+              name: test_product_id_unique
+          - not_null:
+              name: test_product_id_not_null
+          - relationships:
+              name: test_product_relationship
+              to: ref('product')
+              field: id
+      - name: order_date
+        tests:
+          - not_null:
+              name: test_order_date_not_null

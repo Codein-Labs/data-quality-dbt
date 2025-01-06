@@ -1,0 +1,18 @@
+
+# Ide
+.idea/
+.jetclient/
+
+# Fichiers spécifiques à l'éditeur
+*.swp
+.vscode/
+
+# Logs et rapports
+logs
+
+# dbt
+.user.yml
+package-lock.yml
+dbt_packages/
+logs/
+target/
