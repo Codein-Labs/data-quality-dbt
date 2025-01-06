@@ -44,7 +44,7 @@ Ce projet est une démonstration simple de l'utilisation de dbt pour gérer la q
 ### Access
 
 * Accédez à Adminer via http://localhost:8080 :
-** Serveur : db
-** Utilisateur : user
-** Mot de passe : password
-** Base de données : dbt_demo
+  * Serveur : db
+  * Utilisateur : user
+  * Mot de passe : password
+  * Base de données : dbt_demo
